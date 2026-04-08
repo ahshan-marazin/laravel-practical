@@ -26,3 +26,12 @@ Route::post('/crud/store', [CrudController::class, 'store'])->name('crud.store')
 Route::get('/crud/edit/{id}', [CrudController::class, 'edit'])->name('crud.edit');
 Route::put('/crud/update/{id}', [CrudController::class, 'update'])->name('crud.update');
 Route::delete('/crud/destroy/{id}', [CrudController::class, 'destroy'])->name('crud.destroy');
+
+
+Route::get('/about', function () {
+    return view('pages.about.about');
+})->name('about');
+
+Route::get('/resume', function () {
+    return view('pages.resume.resume');
+})->name('resume');
