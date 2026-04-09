@@ -14,5 +14,11 @@ class Crud extends Model
         'phone',
         'address'
     ];
+
+
+    public function profiles()
+    {
+        return $this->hasOne(Profile::class);
+    }
 }
 
